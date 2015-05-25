@@ -33,7 +33,7 @@
 		this.addBindings();
 	};
 
-	mw.dualScreenControlBar.prototype = {
+	mw.daulScreenControlBar.prototype = {
 		bind: function(name, handler){
 			this.embedPlayer.bindHelper(name, handler);
 		},

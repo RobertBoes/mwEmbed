@@ -1,0 +1,66 @@
+
+<!--S T A R T -->
+<% if( quiz.state === "start") { %>
+
+<span class="welcomeFont">Welcome</span>
+<h2>During this video you will be presented with a Quiz,Good Luck!</h2>
+
+
+<div class='rectangle-box'>
+    <div class='rectangle-content'>
+        <div><span>
+            <a href="#" data-click="startQuiz">Continue</a>
+        </span></div>
+    </div>
+</div>
+
+
+<% } %>
+<!--Q U E S T I O N-->
+<% if( quiz.state === "question") { %>
+
+
+<div id="questionContainer">
+<h2 data-bind="text: displayQuestion "> </h2>
+
+    <ul data-bind="foreach: answeres">
+        <li class ="single-question-box" data-bind="text:answer,
+            click: function(data, event) {
+                $root.selectedAnswer($index())}">
+        </li>
+        </ul>
+</div>
+
+<div class='rectangle-box'>
+    <div class='rectangle-content'>
+        <div><span>
+            <a href="#" data-click="startQuiz">Continue or whatever</a>
+        </span></div>
+    </div>
+</div>
+
+    </br></br></br>
+        <div><span>
+            <a href="#" data-click="otherscreen">openotherr</a>
+        </span></div>
+    </div>
+
+
+
+<% } %>
+
+<!--otherscreen -->
+<% if( quiz.state === "otherscreen") { %>
+
+<h2>seconscreen</h2>
+
+
+<div class='rectangle-box'>
+    <div class='rectangle-content'>
+        <div><span>
+            <a href="#" data-click="startQuiz">Continue</a>
+        </span></div>
+    </div>
+</div>
+
+<% } %>
