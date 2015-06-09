@@ -1,7 +1,7 @@
 <?php
 return array(
 	"quiz" => array(
-		'scripts' => array('resources/knockout-3.3.0.js', 'resources/quiz.js','resources/quizGetCuepoints.js' ),
+		'scripts' => array('resources/quiz.js' ),
 		'dependencies' => 'mw.KBaseScreen',
 		'kalturaPluginName' => 'quiz',
 		'styles' => 'resources/quiz.css',
