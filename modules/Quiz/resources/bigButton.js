@@ -14,12 +14,12 @@
 			addBindings: function() {
 				var _this = this;
 
-				this.bind('onChangeMediaDone playerReady onpause onEndedDone onRemovePlayerSpinner', function(){
+				this.bind('onpause', function(){
 					if( !_this.embedPlayer.isPlaying() && !_this.embedPlayer.isInSequence() ){
 						_this.show();
 					}
 				});
-				this.bind('playing AdSupport_StartAdPlayback onAddPlayerSpinner', function(){
+				this.bind('playing AdSupport_StartAdPlayback', function(){
 					_this.hide(true);
 				});
 				this.bind('onPlayerStateChange', function(e, newState, oldState){
