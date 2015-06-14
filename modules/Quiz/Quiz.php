@@ -13,4 +13,11 @@ return array(
         ),
 		'messageFile' => 'Quiz.i18n.php',
 	),
+	"bigButton" => array(
+		'scripts' => array( 'resources/bigButton.js' ),
+		'dependencies' => 'mw.KBaseButton',
+		'kalturaPluginName' => 'bigButton',
+		'styles' => 'resources/bigButton.css',
+		'messageFile' => 'BigButton.i18n.php',
+	),
 );
