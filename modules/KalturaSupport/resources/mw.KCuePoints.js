@@ -356,7 +356,8 @@
 			var cuePointWrapper = {
 				'cuePoint': rawCuePoint
 			};
-			if (rawCuePoint.cuePointType == 'codeCuePoint.Code' || rawCuePoint.cuePointType == 'thumbCuePoint.Thumb') {
+         //   alert(rawCuePoint.cuePointType);
+            if (rawCuePoint.cuePointType == 'codeCuePoint.Code' || rawCuePoint.cuePointType == 'thumbCuePoint.Thumb' || rawCuePoint.cuePointType == 'quiz.QUIZ_QUESTION') {
 				// Code type cue point ( make it easier for people grepping the code base for an event )
 				eventName = 'KalturaSupport_CuePointReached';
 			} else if (rawCuePoint.cuePointType == 'adCuePoint.Ad') {

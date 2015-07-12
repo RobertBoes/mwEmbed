@@ -1,18 +1,12 @@
-<!--S T A R T -->
-<% if( quiz.state === "start") { %>
+<% if( quiz.state === "welcome") { %>
 <h1><span >Welcome</span></h1>
-<h2>During this video you will be presented with a Quiz,Good Luck!</h2>
-<div class='rectangle-box'>
-    <div class='rectangle-content'>
-        <div><span>
-            <a href="#" data-click="continuePlay">Continue</a>
-        </span></div>
-    </div>
-</div>
-
+<div class="sub-text"></div>
+<!--<div class='confirm-box'>-->
+    <!--<span><a href="#" data-click="continuePlay">Continue</a></span>-->
+<!--</div>-->
+<div class='confirm-box'></div>
 
 <% } %>
-<!--Q U E S T I O N-->
 <% if( quiz.state === "question") { %>
 <div class="header-container">
     <div class="display-question"><%=quiz.question%></div>
@@ -24,20 +18,6 @@
 </div>
 
 <% } %>
-<!--c o m p l e t e d -->
-<% if (quiz.state === "completed"){%>
-
-<!--<div class="title-text"></div>-->
-<!--<div class="sub-text"></div>-->
-<!--<div class="display-content"></div>-->
-<!--<div class='rectangle-box'>-->
-    <!--<div class='rectangle-content'>-->
-    <!--</div>-->
-<!--</div>-->
-
-
-<% } %>
-
 
 <% if (quiz.state === "contentScreen"){%>
 <div class="title-text"></div>
@@ -46,49 +26,33 @@
 <div class='confirm-box'></div>
 <% } %>
 
-
-
-<% if (quiz.state === "submitted"){%>
-
-<!--<div class="title-text"></div>-->
-<!--<div class="sub-text"></div>-->
-<!--<div class="display-content"></div>-->
-<!--<div class='rectangle-box'>-->
-    <!--<div class='rectangle-content'>-->
-    <!--</div>-->
-<!--</div>-->
-
-<% } %>
-
 <% if (quiz.state === "reviewAnswer"){%>
-
+<div class="header-container">
 <div class="sub-text"></div>
+<div class="theQuestion"></div>
+<div class="yourAnswer"></div>
+<div class="correctAnswer"></div>
+<div class="whyButton"></div>
 <div class="gotItBox"></div>
-
-
 <% } %>
 
-
-
-
+<% if (quiz.state === "why"){%>
+<div class="header-container">
+<div class="sub-text"></div>
+<div class = 'hint-container'></div>
+<div class='confirm-box'></div>
+<% } %>
 
 
 <!--H i n t -->
 <% if( quiz.state === "hint") { %>
-
 <h2>hint</h2>
 <div class = 'hint-container'></div>
-
-<div class='rectangle-box'>
-    <div class='rectangle-content'>
-back to question
-    </div>
-</div>
+<div class='confirm-box'></div>
 
 <% } %>
+
 <!--thankyou-->
 <% if( quiz.state === "thankyou") { %>
-
 <h1>Thank You</h1>
-
 <% } %>
