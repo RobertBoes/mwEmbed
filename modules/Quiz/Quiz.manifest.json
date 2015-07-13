@@ -5,11 +5,11 @@
             "parent" : {
                 "doc" : "Parent container for component. Components include default placement, leave as null if unsure.",
                 "type" : "enum",
-                "enum" : {
+                "enum" : [
                         "topBarContainer",
                         "videoHolder",
-                        "controlsContainer"}
-            },
+                        "controlsContainer"]
+            }
         }
     }
-};
+}
